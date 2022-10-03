@@ -85,9 +85,13 @@ function App() {
 
   const objUrl = useObjectURL(image);
 
+  const loaderRef = React.useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const read = async () => {
       setLoading(true);
+
+      loaderRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
 
       try {
         const { data } = await worker.recognize(image);
@@ -139,6 +143,7 @@ function App() {
         mt={isMobile ? 0 : 10}
         borderRadius={isMobile ? 0 : 10}
         gap={5}
+        flex={isMobile ? 1 : 0}
       >
         <Box display="flex" flexDir="column" gap={5} pt={isMobile ? 3 : 0}>
           <Heading as="h1" fontSize="2xl">
@@ -181,8 +186,9 @@ function App() {
             overflow="hidden"
             gap={5}
             borderRadius={5}
+            ref={loaderRef}
           >
-            {objUrl && <Image src={objUrl} />}
+            {objUrl && <Image maxH={300} objectFit="contain" src={objUrl} />}
             {loading ? (
               <Progress mx={5} mb={5} value={progress} borderRadius={2} />
             ) : ocr ? (
@@ -242,6 +248,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://github.com/naptha/tesseract.js/"
+                    color="whiteAlpha.600"
                   >
                     tesseract.js
                   </Link>
