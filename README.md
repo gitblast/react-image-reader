@@ -10,3 +10,7 @@ A simple proof-of-concept utility for reading text content from images.
 - [Chakra UI](https://chakra-ui.com/)
 - [tesseract.js](https://github.com/naptha/tesseract.js/)
 - [Vite](https://vitejs.dev/)
+
+## Preview
+
+![image](./docs/imgreader.png)
