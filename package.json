@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://gitblast.github.io/react-image-reader",
+  "homepage": "https://gitblast.github.io/react-image-reader",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -18,7 +18,6 @@
     "framer-motion": "^7.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-webcam": "^7.0.1",
     "tesseract.js": "^3.0.3"
   },
   "devDependencies": {
