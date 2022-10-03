@@ -2,6 +2,8 @@
 
 A simple proof-of-concept utility for reading text content from images.
 
+[Demo](https://gitblast.github.io/react-image-reader/)
+
 ## Built using
 
 - [React](https://reactjs.org/)
